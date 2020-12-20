@@ -1,38 +1,113 @@
 .App {
   text-align: center;
+  display: flex;
+  height: 100%;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
+  font-size: 40vmin;
   color: #61dafb;
+  text-shadow: -10px 10px blue;
+  position: absolute;
+  right: 100px;
+  top: 0%;
+  pointer-events: none;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+header {
+  width: 175px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header ul {
+  list-style-type: none;
+  position: absolute;
+  width: 175px;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  text-align: left;
+  padding: 0;
+}
+
+header ul li {
+  font-size: 25px;
+  display: block;
+  height: 100%;
+}
+
+header ul li:hover {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-name: bounce-nav;
+  -moz-animation-name: bounce-nav;
+}
+
+@keyframes bounce-nav {
+	0%, 100% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+    transform:         translateY(0);
+	}
+	50% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform:     translateY(-5px);
+    transform:         translateY(-5px);
+	}
+}
+
+header ul li:hover:after {
+  content: "\B7";
+}
+
+header ul li .fa-stack {
+  font-size: 25px;
+}
+
+.blink-cursor {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
   to {
-    transform: rotate(360deg);
+    visibility: hidden;
   }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #22d419; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2s steps(9, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #22d419; }
 }
