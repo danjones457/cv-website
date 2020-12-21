@@ -4,19 +4,8 @@
   height: 100%;
 }
 
-.App-logo {
-  font-size: 40vmin;
-  color: #61dafb;
-  text-shadow: -10px 10px blue;
-  position: absolute;
-  right: 100px;
-  top: 0%;
-  pointer-events: none;
-  margin: 0;
-}
-
 header {
-  width: 175px;
+  width: 220px;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
@@ -71,22 +60,6 @@ header ul li:hover:after {
 
 header ul li .fa-stack {
   font-size: 25px;
-}
-
-.blink-cursor {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
 }
 
 .typewriter h1 {

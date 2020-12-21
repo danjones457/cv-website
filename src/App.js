@@ -16,7 +16,10 @@ function App() {
           <li onClick={() => setPage(5)} className="text-green"><i class="fas fa-lightbulb"></i> <span className="hidden md:inline-block">Projects</span></li>
         </ul>
       </header>
-      <div>
+      <div className="w-full p-5">
+        <div className="typewriter w-min m-auto text-center">
+          <h1 className="text-green font-bold text-3xl">Dan Jones</h1>
+        </div>
         <BodyPage page={page} />
       </div>
     </div>
