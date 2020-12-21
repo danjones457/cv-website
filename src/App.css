@@ -1,44 +1,5 @@
-.App {
-  text-align: center;
-  display: flex;
-  height: 100%;
-}
-
-header {
-  width: 220px;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-header ul {
-  list-style-type: none;
-  position: absolute;
-  width: 175px;
-  top: 50%;
-  left: 10px;
-  transform: translate(0, -50%);
-  text-align: left;
-  padding: 0;
-}
-
-header ul li {
-  font-size: 25px;
-  display: block;
-  height: 100%;
-}
-
 header ul li:hover {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  -webkit-animation-iteration-count: 1;
-  animation-name: bounce-nav;
-  -moz-animation-name: bounce-nav;
+  animation: bounce-nav 0.5s ease-in-out 1s 1 normal both;
 }
 
 @keyframes bounce-nav {
@@ -58,15 +19,8 @@ header ul li:hover:after {
   content: "\B7";
 }
 
-header ul li .fa-stack {
-  font-size: 25px;
-}
-
 .typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #22d419; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: .15em; /* Adjust as needed */
+  font-family: 'Roboto Mono', monospace;
   animation: 
     typing 2s steps(9, end),
     blink-caret .75s step-end infinite;
