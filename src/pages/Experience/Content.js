@@ -25,7 +25,7 @@ export default function Content(props) {
                     </div>
                     <div className="w-full lg:w-3/4">
                         <h1 className="text-2xl">
-                            {props.companyName}
+                            {props.name}
                         </h1>
                         <p className="text-gray-500">{props.role}</p>
                         <p>{props.description}</p>

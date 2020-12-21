@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import BodyPage from './pages/BodyPage';
 
 function App() {
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(4);
 
   return (
     <div className="text-center flex h-full">
