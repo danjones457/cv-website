@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import BodyPage from './pages/BodyPage';
 
 function App() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(3);
 
   return (
     <div className="text-center flex h-full">
@@ -18,7 +18,7 @@ function App() {
       </header>
       <div className="w-full p-5 overflow-y-auto">
         <div className="typewriter w-min m-auto text-center">
-          <h1 className="text-green font-bold text-3xl overflow-hidden whitespace-nowrap tracking-widest border-r-4 border-solid border-green">Dan Jones</h1>
+          <h1 className="text-green font-bold text-3xl">Dan Jones</h1>
         </div>
         <BodyPage page={page} />
       </div>
