@@ -16,7 +16,10 @@ class Education extends React.Component {
                     logoUrl="cardiff.jpg" 
                     name="Cardiff University"
                     role="Applied Software Engineering"
-                    description=""
+                    description={<div>
+                        <p>Bachelor's Degree</p>
+                        <p><strong>Grade: </strong> 2:1</p>
+                    </div>}
                 />
                 <Content 
                     last={true}

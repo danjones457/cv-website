@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import MyAge from './About/MyAge';
 import Languages from './About/Languages';
 import Frameworks from './About/Frameworks';
@@ -17,7 +16,7 @@ class About extends React.Component {
                 <span className="text-green">Software Engineer</span>
             </div>
             <div className="py-5 text-gray-300">
-                <p>I am a Software Consultant at Office & Dragons working in Central London. I graduated from Cardiff University with a 2:1 in Applied Software Engineering.</p>
+                <p>I am a Software Engineer at Office & Dragons working in Central London. I graduated from Cardiff University with a 2:1 in Applied Software Engineering.</p>
             </div>
             <div className="py-5 px-10">
                 <hr className="border-gray-500"/>
