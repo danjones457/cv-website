@@ -1,4 +1,3 @@
-import Paper from '@material-ui/core/Paper';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
@@ -19,18 +18,20 @@ export default function Content(props) {
                 {!props.last ? <TimelineConnector /> : null}
             </TimelineSeparator>
             <TimelineContent>
-                <Paper elevation={3} className="lg:flex p-2">
-                    <div className="w-3/4 m-auto lg:w-1/4 pr-2">
-                        <img src={process.env.PUBLIC_URL + '/work-logos/' + props.logoUrl} alt={props.name + " logo"}/>
+                <div className="outer-content">
+                    <div className="lg:flex p-4 bg-white rounded-lg">
+                        <div className="w-3/4 m-auto lg:w-1/4 pr-2 m-auto">
+                            <img src={process.env.PUBLIC_URL + '/work-logos/' + props.logoUrl} alt={props.name + " logo"}/>
+                        </div>
+                        <div className="w-full lg:w-3/4">
+                            <h1 className="text-2xl">
+                                {props.name}
+                            </h1>
+                            <p className="text-gray-500">{props.role}</p>
+                            <div>{props.description}</div>
+                        </div>
                     </div>
-                    <div className="w-full lg:w-3/4">
-                        <h1 className="text-2xl">
-                            {props.name}
-                        </h1>
-                        <p className="text-gray-500">{props.role}</p>
-                        <p>{props.description}</p>
-                    </div>
-                </Paper>
+                </div>                
             </TimelineContent>
         </TimelineItem>
     );

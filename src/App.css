@@ -41,3 +41,8 @@ header ul li:hover:after {
   from, to { border-color: transparent }
   50% { border-color: #22d419; }
 }
+
+.outer-content {
+  outline: 2px solid rgba(113, 113, 122, 1);
+  outline-offset: -10px;
+}
